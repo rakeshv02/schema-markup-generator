@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schema Markup Generator – Free JSON-LD Structured Data Tool | Tabutility</title>
+  <meta name="description" content="Free schema markup generator for JSON-LD structured data. Create valid FAQPage, Article, LocalBusiness, Product, HowTo and BreadcrumbList schema for rich results — instant, no sign-up." />
+  <meta name="keywords" content="schema markup generator, JSON-LD generator, structured data generator, FAQ schema, Article schema, LocalBusiness schema, Product schema, HowTo schema, BreadcrumbList schema, rich results" />
+  <link rel="canonical" href="https://schema-markup-generator.tabutility.com/" />
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+  <meta property="og:title" content="Schema Markup Generator – Free JSON-LD Structured Data Tool | Tabutility"/>
+  <meta property="og:description" content="Generate valid JSON-LD structured data for FAQ, Article, LocalBusiness, Product, HowTo and Breadcrumb schema. Free, instant, no sign-up."/>
+  <meta property="og:url" content="https://schema-markup-generator.tabutility.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Tabutility"/>
+  <meta property="og:image" content="https://schema-markup-generator.tabutility.com/og-card.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://schema-markup-generator.tabutility.com/og-card.png"/>
+  <meta name="twitter:title" content="Schema Markup Generator – Free JSON-LD Structured Data Tool | Tabutility"/>
+  <meta name="twitter:description" content="Generate valid JSON-LD structured data for FAQ, Article, LocalBusiness, Product, HowTo and Breadcrumb schema."/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Schema Markup Generator","description":"Generate valid JSON-LD structured data for FAQPage, Article, LocalBusiness, Product, HowTo and BreadcrumbList schema types — free and instant, runs entirely in your browser.","url":"https://schema-markup-generator.tabutility.com/","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"SEO Tools","item":"https://tabutility.com/#seo"},{"@type":"ListItem","position":3,"name":"Schema Markup Generator","item":"https://schema-markup-generator.tabutility.com/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is schema markup (JSON-LD)?","acceptedAnswer":{"@type":"Answer","text":"Schema markup is structured data — a standardised vocabulary from schema.org — that you add to a web page so search engines understand its content. JSON-LD is Google's recommended format: a block of JSON inside a script tag that describes things like FAQs, products, articles and businesses without changing how the page looks to visitors."}},{"@type":"Question","name":"Does schema markup improve SEO rankings?","acceptedAnswer":{"@type":"Answer","text":"Schema markup is not a direct ranking factor, but it makes your pages eligible for rich results — star ratings, FAQ dropdowns, breadcrumbs, recipe cards and more. These enhanced listings improve click-through rate, which indirectly helps performance in search."}},{"@type":"Question","name":"Where do I put the generated JSON-LD code?","acceptedAnswer":{"@type":"Answer","text":"Paste the entire script tag into the HTML head or body of the page it describes. It works anywhere in the document, but the head is conventional. In WordPress you can add it with a plugin like Header Footer Code Manager or paste it into a Custom HTML block."}},{"@type":"Question","name":"How do I test if my schema markup is valid?","acceptedAnswer":{"@type":"Answer","text":"Use Google's Rich Results Test or the schema.org validator. Paste your JSON-LD or the live URL and it will report which rich result types are eligible and flag any missing required properties. This tool includes a one-click link to the Rich Results Test."}},{"@type":"Question","name":"Is this schema markup generator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free with no sign-up. Everything runs in your browser, so your content never leaves your device."}},{"@type":"Question","name":"Which schema type should I use?","acceptedAnswer":{"@type":"Answer","text":"Match the schema to the page: use FAQPage for Q&A sections, Article for blog posts and news, LocalBusiness for a physical location, Product for shop pages with prices and reviews, HowTo for step-by-step guides, and BreadcrumbList to show a page's position in your site hierarchy."}}]}</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="alternate" hreflang="en" href="https://schema-markup-generator.tabutility.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://schema-markup-generator.tabutility.com/" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#0f172a;color:#f1f5f9;font-family:'Segoe UI',system-ui,Arial,sans-serif;line-height:1.6}
+    .site-nav{background:#1e293b;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+    .site-nav a{color:#a5b4fc;text-decoration:none;font-size:14px}
+    .site-nav a:hover{color:#fff}
+    .nav-brand{color:#fff;font-weight:700;font-size:16px}
+    #ad-top,#ad-bottom{text-align:center;padding:4px;background:#0f172a}
+    #app{max-width:680px;margin:8px auto;padding:0 16px}
+    h1{font-size:26px;margin:18px 0 6px;color:#fff}
+    .sub{color:#94a3b8;font-size:14px;margin-bottom:20px}
+    .card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:20px;margin-bottom:18px}
+    label{display:block;font-size:13px;font-weight:600;color:#94a3b8;margin:12px 0 6px}
+    input,select,textarea{width:100%;background:#0f172a;color:#f1f5f9;border:1px solid #334155;border-radius:8px;padding:11px 12px;font-size:16px;font-family:inherit}
+    textarea{resize:vertical;min-height:70px}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:#818cf8}
+    .muted{color:#94a3b8}
+    .btn{background:#4f46e5;color:#fff;border:none;border-radius:8px;padding:11px 16px;font-size:14px;font-weight:600;cursor:pointer}
+    .btn:hover{background:#4338ca}
+    .btn-sm{background:#334155;color:#e2e8f0;border:none;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer}
+    .btn-sm:hover{background:#475569}
+    .btn-danger{background:#7f1d1d;color:#fecaca}
+    .btn-danger:hover{background:#991b1b}
+    .repeat-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:10px}
+    .repeat-row>.fields{flex:1;min-width:0}
+    .repeat-row>.fields input,.repeat-row>.fields textarea{margin-bottom:6px}
+    .hint{font-size:11px;color:#64748b;margin-top:4px}
+    .out-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+    .out-head strong{color:#fff;font-size:15px}
+    pre{background:#0b1120;border:1px solid #334155;border-radius:8px;padding:14px;overflow:auto;font-family:'SFMono-Regular',Consolas,Menlo,monospace;font-size:13px;color:#a5f3fc;white-space:pre;max-height:420px}
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    .rrt{color:#818cf8;text-decoration:none;font-size:13px;font-weight:600}
+    .rrt:hover{color:#a5b4fc}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:520px){.grid2{grid-template-columns:1fr}}
+    .seo-content{max-width:680px;margin:26px auto;padding:0 16px;color:#cbd5e1;font-size:15px}
+    .seo-content h2{color:#fff;font-size:20px;margin:26px 0 10px}
+    .seo-content h3{color:#e2e8f0;font-size:16px;margin:18px 0 8px}
+    .seo-content p{margin-bottom:12px}
+    .seo-content ul{margin:0 0 12px 20px}
+    .seo-content li{margin-bottom:6px}
+    footer{background:#1a1a2e;color:#94a3b8;text-align:center;padding:24px 16px;font-size:13px;margin-top:30px}
+    footer a{color:#a5b4fc;text-decoration:none}
+  </style>
+  <style id="tabutility-brand-v2">
+/* Canonical dark-surface spec (STYLE.md): indigo accent, white text on indigo */
+.btn,.toggle-btn.active,button.active{color:#fff!important}
+nav .brand{color:#fff}
+nav a:hover{color:#818cf8}
+input:focus,select:focus,textarea:focus{border-color:#818cf8!important}
+/* AdSense not yet approved: hide all ad frames (container min-height still reserves space). Remove these two lines after approval. */
+ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibility:hidden!important}
+</style>
+</head>
+<body>
+  <nav class="site-nav"><span class="nav-brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
+  <div id="ad-top"><ins class="adsbygoogle" style="display:block;min-height:90px" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div id="app">
+    <h1>🏷️ Schema Markup Generator</h1>
+    <p class="sub">Build valid JSON-LD structured data for rich results — FAQ, Article, Local Business, Product, HowTo and Breadcrumb. Everything runs in your browser.</p>
+
+    <div class="card">
+      <label for="schemaType">Schema type</label>
+      <select id="schemaType">
+        <option value="FAQPage" selected>FAQPage</option>
+        <option value="Article">Article</option>
+        <option value="LocalBusiness">LocalBusiness</option>
+        <option value="Product">Product</option>
+        <option value="HowTo">HowTo</option>
+        <option value="BreadcrumbList">BreadcrumbList</option>
+      </select>
+      <div id="form"></div>
+    </div>
+
+    <div class="card">
+      <div class="out-head">
+        <strong>Generated JSON-LD</strong>
+        <div class="actions">
+          <button class="btn-sm" id="copyBtn">📋 Copy</button>
+          <a class="rrt" id="rrtLink" href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer">✅ Validate on Rich Results Test →</a>
+        </div>
+      </div>
+      <pre id="output">&lt;script type="application/ld+json"&gt;&lt;/script&gt;</pre>
+    </div>
+  </div>
+
+  <div class="seo-content">
+    <h2>How the schema markup generator works</h2>
+    <p>Structured data is the language search engines use to understand what a page is really about. This <strong>schema markup generator</strong> turns a few simple form fields into valid <strong>JSON-LD</strong> — the format Google officially recommends — wrapped in a ready-to-paste <code>&lt;script type="application/ld+json"&gt;</code> tag. Pick a schema type, fill in the fields, and the code updates instantly as you type. Nothing is sent to a server; the entire tool runs client-side, so your content stays private.</p>
+    <p>JSON-LD lives quietly in your page's HTML and never changes how the page looks to visitors. Instead, it feeds crawlers a clean, machine-readable summary that can unlock <strong>rich results</strong>: FAQ dropdowns, star ratings, breadcrumb trails, article bylines and step-by-step HowTo cards right inside the search listing.</p>
+
+    <h2>Which schema type should you use?</h2>
+    <h3>FAQPage</h3>
+    <p>For pages with a genuine list of questions and answers. Each Q&A can appear as an expandable dropdown under your search result. Only mark up FAQs that are actually visible on the page.</p>
+    <h3>Article</h3>
+    <p>For blog posts, guides and news. Provide a headline, author, publish date and a wide image (at least 1200px) so Google can build a strong Top Stories or Discover entry.</p>
+    <h3>LocalBusiness</h3>
+    <p>For a physical location. Include the exact name, full address, phone, opening hours and — ideally — latitude and longitude so your business is eligible for map and local-pack enhancements.</p>
+    <h3>Product</h3>
+    <p>For shop and listing pages. Add price, currency and aggregate rating to become eligible for the price-and-review snippet that stands out in shopping-related searches.</p>
+    <h3>HowTo &amp; BreadcrumbList</h3>
+    <p>Use <strong>HowTo</strong> for step-by-step instructions and <strong>BreadcrumbList</strong> to show where a page sits in your site hierarchy, replacing the raw URL in the result with a tidy breadcrumb path.</p>
+
+    <h2>Best practices</h2>
+    <ul>
+      <li><strong>Only mark up what's on the page.</strong> Google penalises structured data that describes content the visitor can't see.</li>
+      <li><strong>Fill every required property.</strong> Missing fields make a page ineligible for the rich result even if the syntax is valid.</li>
+      <li><strong>Use one JSON-LD block per type</strong> and place it in the head or body of the exact page it describes.</li>
+      <li><strong>Use absolute URLs</strong> (including <code>https://</code>) for images, breadcrumb links and business pages.</li>
+      <li><strong>Always validate</strong> with Google's Rich Results Test before and after publishing.</li>
+    </ul>
+
+    <h2>Common mistakes to avoid</h2>
+    <ul>
+      <li>Adding FAQ schema to pages without visible FAQs — a frequent cause of manual actions.</li>
+      <li>Leaving placeholder text (like "example.com") in the live markup.</li>
+      <li>Using fake or inflated review ratings on Product schema.</li>
+      <li>Forgetting to update dates on Article schema when you refresh a post.</li>
+      <li>Pasting the JSON without the surrounding <code>&lt;script&gt;</code> tag.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <h3>What is schema markup (JSON-LD)?</h3>
+    <p>Schema markup is structured data from the shared schema.org vocabulary that describes your page to search engines. JSON-LD is the JSON-based format Google recommends — a script block that adds meaning without altering how the page looks.</p>
+    <h3>Does schema markup improve SEO rankings?</h3>
+    <p>It isn't a direct ranking signal, but it makes pages eligible for rich results that boost click-through rate — which indirectly helps your search performance.</p>
+    <h3>Where do I put the generated code?</h3>
+    <p>Paste the whole script tag into the HTML of the page it describes, ideally in the <code>&lt;head&gt;</code>. In WordPress, use a header/footer code plugin or a Custom HTML block.</p>
+    <h3>How do I test if my schema is valid?</h3>
+    <p>Run it through Google's Rich Results Test (linked from the tool above) or the schema.org validator to confirm eligibility and catch missing properties.</p>
+  </div>
+
+  <div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=SEO+books+blue+light+glasses+laptop+stand&tag=tabutility-20','_blank','noopener noreferrer')" title="Gear up for better SEO work">
+    <span style="font-size:28px;flex-shrink:0">📈</span>
+    <div style="min-width:0">
+      <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Level up your SEO &amp; workspace</div>
+      <div style="font-size:12px;color:#94a3b8">SEO books, blue-light glasses &amp; laptop stands <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+      <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
+    </div>
+  </div>
+
+  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
+  <div style="max-width:640px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+    <a href="https://meta-tags-generator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+      <div style="font-size:13px;font-weight:600;color:#f1f5f9">Meta Tags Generator</div>
+      <div style="font-size:11px;color:#94a3b8;margin-top:2px">SEO</div>
+    </a>
+    <a href="https://serp-snippet-preview.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+      <div style="font-size:13px;font-weight:600;color:#f1f5f9">SERP Snippet Preview</div>
+      <div style="font-size:11px;color:#94a3b8;margin-top:2px">SEO</div>
+    </a>
+    <a href="https://json-formatter.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+      <div style="font-size:13px;font-weight:600;color:#f1f5f9">JSON Formatter</div>
+      <div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer</div>
+    </a>
+    <a href="https://word-counter.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+      <div style="font-size:13px;font-weight:600;color:#f1f5f9">Word Counter</div>
+      <div style="font-size:11px;color:#94a3b8;margin-top:2px">Writing</div>
+    </a>
+  </div>
+
+  <div id="ad-bottom"><ins class="adsbygoogle" style="display:block;min-height:250px" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <footer>
+    <p>© 2026 Tabutility · <a href="https://tabutility.com">More free tools →</a> · Runs entirely in your browser.</p>
+  </footer>
+
+<script>
+// ---- Schema Markup Generator ----
+// State per schema type, pre-filled with sensible examples so output is never empty.
+var state = {
+  FAQPage: [
+    { q: 'What is schema markup?', a: 'Schema markup is structured data that helps search engines understand your page and enables rich results.' },
+    { q: 'Is JSON-LD better than microdata?', a: 'Yes — JSON-LD is the format Google recommends because it is added as a single, self-contained block.' }
+  ],
+  Article: {
+    headline: 'How to Add Schema Markup to Your Website',
+    author: 'Jane Doe',
+    publisher: 'Example Blog',
+    url: 'https://example.com/blog/schema-markup-guide',
+    image: 'https://example.com/images/schema-guide.jpg',
+    datePublished: '2025-01-15',
+    dateModified: '2025-02-01'
+  },
+  LocalBusiness: {
+    name: 'Downtown Coffee Roasters',
+    street: '123 Main Street',
+    city: 'Toronto',
+    region: 'ON',
+    postal: 'M5V 2T6',
+    country: 'CA',
+    phone: '+1-416-555-0100',
+    url: 'https://example.com',
+    image: 'https://example.com/images/storefront.jpg',
+    priceRange: '$$',
+    hours: 'Mo-Fr 08:00-18:00',
+    lat: '43.6532',
+    lng: '-79.3832'
+  },
+  Product: {
+    name: 'Wireless Noise-Cancelling Headphones',
+    image: 'https://example.com/images/headphones.jpg',
+    description: 'Over-ear wireless headphones with active noise cancellation and 30-hour battery.',
+    brand: 'Acme Audio',
+    sku: 'ACME-NC-100',
+    price: '199.99',
+    currency: 'USD',
+    availability: 'InStock',
+    rating: '4.6',
+    reviewCount: '128',
+    url: 'https://example.com/products/headphones'
+  },
+  HowTo: {
+    name: 'How to Brew Pour-Over Coffee',
+    description: 'A simple method for brewing a clean, flavourful cup of pour-over coffee at home.',
+    steps: [
+      { name: 'Boil the water', text: 'Heat filtered water to about 96°C (205°F).' },
+      { name: 'Add the grounds', text: 'Place 20g of medium-fine coffee in the filter.' },
+      { name: 'Pour and wait', text: 'Pour water in slow circles and let it drip through for about 3 minutes.' }
+    ]
+  },
+  BreadcrumbList: [
+    { name: 'Home', url: 'https://example.com' },
+    { name: 'Blog', url: 'https://example.com/blog' },
+    { name: 'Schema Markup Guide', url: 'https://example.com/blog/schema-markup-guide' }
+  ]
+};
+
+var CURRENCIES = ['USD','EUR','GBP','CAD','AUD','JPY','INR'];
+var AVAIL = ['InStock','OutOfStock','PreOrder','BackOrder','Discontinued'];
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function el(id){ return document.getElementById(id); }
+function v(id){ var e=el(id); return e ? e.value : ''; }
+
+// ---- JSON-LD builders (return an object; empty-ish fields are omitted) ----
+function put(obj,key,val){ if(val!==undefined&&val!==null&&String(val).trim()!=='') obj[key]=val; }
+
+function buildFAQ(){
+  var items=[];
+  for(var i=0;i<state.FAQPage.length;i++){
+    var it=state.FAQPage[i];
+    if(!it.q.trim() && !it.a.trim()) continue;
+    items.push({ '@type':'Question', name:it.q, acceptedAnswer:{ '@type':'Answer', text:it.a } });
+  }
+  return { '@context':'https://schema.org', '@type':'FAQPage', mainEntity:items };
+}
+function buildArticle(){
+  var a=state.Article, o={ '@context':'https://schema.org', '@type':'Article' };
+  put(o,'headline',a.headline);
+  if(a.image.trim()) o.image=[a.image];
+  if(a.author.trim()) o.author={ '@type':'Person', name:a.author };
+  if(a.publisher.trim()) o.publisher={ '@type':'Organization', name:a.publisher };
+  put(o,'datePublished',a.datePublished);
+  put(o,'dateModified',a.dateModified);
+  if(a.url.trim()) o.mainEntityOfPage={ '@type':'WebPage', '@id':a.url };
+  return o;
+}
+function buildLocal(){
+  var b=state.LocalBusiness, o={ '@context':'https://schema.org', '@type':'LocalBusiness' };
+  put(o,'name',b.name);
+  if(b.image.trim()) o.image=b.image;
+  put(o,'url',b.url);
+  put(o,'telephone',b.phone);
+  put(o,'priceRange',b.priceRange);
+  var addr={ '@type':'PostalAddress' };
+  put(addr,'streetAddress',b.street); put(addr,'addressLocality',b.city);
+  put(addr,'addressRegion',b.region); put(addr,'postalCode',b.postal);
+  put(addr,'addressCountry',b.country);
+  if(Object.keys(addr).length>1) o.address=addr;
+  if(b.lat.trim() && b.lng.trim()) o.geo={ '@type':'GeoCoordinates', latitude:b.lat, longitude:b.lng };
+  if(b.hours.trim()) o.openingHours=b.hours;
+  return o;
+}
+function buildProduct(){
+  var p=state.Product, o={ '@context':'https://schema.org', '@type':'Product' };
+  put(o,'name',p.name);
+  if(p.image.trim()) o.image=p.image;
+  put(o,'description',p.description);
+  if(p.brand.trim()) o.brand={ '@type':'Brand', name:p.brand };
+  put(o,'sku',p.sku);
+  if(p.price.trim()){
+    var offer={ '@type':'Offer', price:p.price, priceCurrency:p.currency };
+    if(p.availability.trim()) offer.availability='https://schema.org/'+p.availability;
+    if(p.url.trim()) offer.url=p.url;
+    o.offers=offer;
+  }
+  if(p.rating.trim() && p.reviewCount.trim()){
+    o.aggregateRating={ '@type':'AggregateRating', ratingValue:p.rating, reviewCount:p.reviewCount };
+  }
+  return o;
+}
+function buildHowTo(){
+  var h=state.HowTo, o={ '@context':'https://schema.org', '@type':'HowTo' };
+  put(o,'name',h.name);
+  put(o,'description',h.description);
+  var steps=[];
+  for(var i=0;i<h.steps.length;i++){
+    var s=h.steps[i];
+    if(!s.name.trim() && !s.text.trim()) continue;
+    var step={ '@type':'HowToStep' };
+    put(step,'name',s.name); put(step,'text',s.text);
+    steps.push(step);
+  }
+  o.step=steps;
+  return o;
+}
+function buildBreadcrumb(){
+  var list=[], pos=1;
+  for(var i=0;i<state.BreadcrumbList.length;i++){
+    var b=state.BreadcrumbList[i];
+    if(!b.name.trim() && !b.url.trim()) continue;
+    var item={ '@type':'ListItem', position:pos++, name:b.name };
+    if(b.url.trim()) item.item=b.url;
+    list.push(item);
+  }
+  return { '@context':'https://schema.org', '@type':'BreadcrumbList', itemListElement:list };
+}
+
+var BUILDERS = {
+  FAQPage: buildFAQ, Article: buildArticle, LocalBusiness: buildLocal,
+  Product: buildProduct, HowTo: buildHowTo, BreadcrumbList: buildBreadcrumb
+};
+
+// ---- Form renderers (per type) ----
+function textField(label, id, val, ph, multiline){
+  var input = multiline
+    ? '<textarea id="'+id+'" placeholder="'+esc(ph||'')+'">'+esc(val||'')+'</textarea>'
+    : '<input type="text" id="'+id+'" value="'+esc(val||'')+'" placeholder="'+esc(ph||'')+'" />';
+  return '<label for="'+id+'">'+label+'</label>'+input;
+}
+function selectField(label, id, val, opts){
+  var s='<label for="'+id+'">'+label+'</label><select id="'+id+'">';
+  for(var i=0;i<opts.length;i++){
+    s+='<option value="'+opts[i]+'"'+(opts[i]===val?' selected':'')+'>'+opts[i]+'</option>';
+  }
+  return s+'</select>';
+}
+
+function renderForm(){
+  var type=v('schemaType');
+  var f=el('form'), html='';
+  if(type==='FAQPage'){
+    html+='<label>Questions &amp; answers</label>';
+    for(var i=0;i<state.FAQPage.length;i++){
+      var it=state.FAQPage[i];
+      html+='<div class="repeat-row"><div class="fields">'+
+        '<input type="text" data-r="faq" data-i="'+i+'" data-k="q" value="'+esc(it.q)+'" placeholder="Question" />'+
+        '<textarea data-r="faq" data-i="'+i+'" data-k="a" placeholder="Answer">'+esc(it.a)+'</textarea>'+
+        '</div><button class="btn-sm btn-danger" data-del="FAQPage" data-i="'+i+'">✕</button></div>';
+    }
+    html+='<button class="btn-sm" data-add="FAQPage">+ Add Q&amp;A</button>';
+  } else if(type==='Article'){
+    var a=state.Article;
+    html+=textField('Headline','a_headline',a.headline,'Article title');
+    html+='<div class="grid2">'+
+      '<div>'+textField('Author','a_author',a.author,'Jane Doe')+'</div>'+
+      '<div>'+textField('Publisher','a_publisher',a.publisher,'Site or company name')+'</div></div>';
+    html+=textField('Page URL','a_url',a.url,'https://example.com/post');
+    html+=textField('Image URL','a_image',a.image,'https://example.com/image.jpg');
+    html+='<div class="grid2">'+
+      '<div><label for="a_datePublished">Date published</label><input type="date" id="a_datePublished" value="'+esc(a.datePublished)+'" /></div>'+
+      '<div><label for="a_dateModified">Date modified</label><input type="date" id="a_dateModified" value="'+esc(a.dateModified)+'" /></div></div>';
+  } else if(type==='LocalBusiness'){
+    var b=state.LocalBusiness;
+    html+=textField('Business name','l_name',b.name,'Business name');
+    html+=textField('Street address','l_street',b.street,'123 Main Street');
+    html+='<div class="grid2">'+
+      '<div>'+textField('City','l_city',b.city,'City')+'</div>'+
+      '<div>'+textField('Region / State','l_region',b.region,'ON')+'</div></div>';
+    html+='<div class="grid2">'+
+      '<div>'+textField('Postal code','l_postal',b.postal,'M5V 2T6')+'</div>'+
+      '<div>'+textField('Country code','l_country',b.country,'CA')+'</div></div>';
+    html+='<div class="grid2">'+
+      '<div>'+textField('Phone','l_phone',b.phone,'+1-416-555-0100')+'</div>'+
+      '<div>'+textField('Price range','l_priceRange',b.priceRange,'$$')+'</div></div>';
+    html+=textField('Website URL','l_url',b.url,'https://example.com');
+    html+=textField('Image URL','l_image',b.image,'https://example.com/photo.jpg');
+    html+=textField('Opening hours','l_hours',b.hours,'Mo-Fr 08:00-18:00');
+    html+='<div class="grid2">'+
+      '<div>'+textField('Latitude','l_lat',b.lat,'43.6532')+'</div>'+
+      '<div>'+textField('Longitude','l_lng',b.lng,'-79.3832')+'</div></div>';
+    html+='<p class="hint">Opening hours use schema.org format, e.g. "Mo-Fr 09:00-17:00".</p>';
+  } else if(type==='Product'){
+    var p=state.Product;
+    html+=textField('Product name','p_name',p.name,'Product name');
+    html+=textField('Image URL','p_image',p.image,'https://example.com/product.jpg');
+    html+=textField('Description','p_description',p.description,'Short product description',true);
+    html+='<div class="grid2">'+
+      '<div>'+textField('Brand','p_brand',p.brand,'Brand name')+'</div>'+
+      '<div>'+textField('SKU','p_sku',p.sku,'SKU-123')+'</div></div>';
+    html+='<div class="grid2">'+
+      '<div>'+textField('Price','p_price',p.price,'199.99')+'</div>'+
+      '<div>'+selectField('Currency','p_currency',p.currency,CURRENCIES)+'</div></div>';
+    html+=selectField('Availability','p_availability',p.availability,AVAIL);
+    html+='<div class="grid2">'+
+      '<div>'+textField('Rating value','p_rating',p.rating,'4.6')+'</div>'+
+      '<div>'+textField('Review count','p_reviewCount',p.reviewCount,'128')+'</div></div>';
+    html+=textField('Product URL','p_url',p.url,'https://example.com/product');
+  } else if(type==='HowTo'){
+    var h=state.HowTo;
+    html+=textField('Title','h_name',h.name,'How to ...');
+    html+=textField('Description','h_description',h.description,'What the guide covers',true);
+    html+='<label>Steps</label>';
+    for(var j=0;j<h.steps.length;j++){
+      var s=h.steps[j];
+      html+='<div class="repeat-row"><div class="fields">'+
+        '<input type="text" data-r="howto" data-i="'+j+'" data-k="name" value="'+esc(s.name)+'" placeholder="Step '+(j+1)+' name" />'+
+        '<textarea data-r="howto" data-i="'+j+'" data-k="text" placeholder="Step '+(j+1)+' instructions">'+esc(s.text)+'</textarea>'+
+        '</div><button class="btn-sm btn-danger" data-del="HowTo" data-i="'+j+'">✕</button></div>';
+    }
+    html+='<button class="btn-sm" data-add="HowTo">+ Add step</button>';
+  } else if(type==='BreadcrumbList'){
+    html+='<label>Breadcrumb items (in order)</label>';
+    for(var k=0;k<state.BreadcrumbList.length;k++){
+      var bc=state.BreadcrumbList[k];
+      html+='<div class="repeat-row"><div class="fields">'+
+        '<input type="text" data-r="crumb" data-i="'+k+'" data-k="name" value="'+esc(bc.name)+'" placeholder="Name" />'+
+        '<input type="text" data-r="crumb" data-i="'+k+'" data-k="url" value="'+esc(bc.url)+'" placeholder="https://example.com/page" />'+
+        '</div><button class="btn-sm btn-danger" data-del="BreadcrumbList" data-i="'+k+'">✕</button></div>';
+    }
+    html+='<button class="btn-sm" data-add="BreadcrumbList">+ Add item</button>';
+  }
+  f.innerHTML=html;
+  bindForm(type);
+  generate();
+}
+
+// Sync simple (non-repeating) fields into state
+function syncSimple(type){
+  if(type==='Article'){
+    var a=state.Article;
+    a.headline=v('a_headline'); a.author=v('a_author'); a.publisher=v('a_publisher');
+    a.url=v('a_url'); a.image=v('a_image'); a.datePublished=v('a_datePublished'); a.dateModified=v('a_dateModified');
+  } else if(type==='LocalBusiness'){
+    var b=state.LocalBusiness;
+    b.name=v('l_name'); b.street=v('l_street'); b.city=v('l_city'); b.region=v('l_region');
+    b.postal=v('l_postal'); b.country=v('l_country'); b.phone=v('l_phone'); b.priceRange=v('l_priceRange');
+    b.url=v('l_url'); b.image=v('l_image'); b.hours=v('l_hours'); b.lat=v('l_lat'); b.lng=v('l_lng');
+  } else if(type==='Product'){
+    var p=state.Product;
+    p.name=v('p_name'); p.image=v('p_image'); p.description=v('p_description'); p.brand=v('p_brand');
+    p.sku=v('p_sku'); p.price=v('p_price'); p.currency=v('p_currency'); p.availability=v('p_availability');
+    p.rating=v('p_rating'); p.reviewCount=v('p_reviewCount'); p.url=v('p_url');
+  } else if(type==='HowTo'){
+    state.HowTo.name=v('h_name'); state.HowTo.description=v('h_description');
+  }
+}
+
+function bindForm(type){
+  var f=el('form');
+  // simple inputs
+  var inputs=f.querySelectorAll('input:not([data-r]),select:not([data-r]),textarea:not([data-r])');
+  for(var i=0;i<inputs.length;i++){
+    inputs[i].addEventListener('input', function(){ syncSimple(type); generate(); });
+    inputs[i].addEventListener('change', function(){ syncSimple(type); generate(); });
+  }
+  // repeating inputs
+  var reps=f.querySelectorAll('[data-r]');
+  for(var j=0;j<reps.length;j++){
+    reps[j].addEventListener('input', function(e){
+      var t=e.target, r=t.getAttribute('data-r'), idx=+t.getAttribute('data-i'), key=t.getAttribute('data-k');
+      if(r==='faq') state.FAQPage[idx][key]=t.value;
+      else if(r==='howto') state.HowTo.steps[idx][key]=t.value;
+      else if(r==='crumb') state.BreadcrumbList[idx][key]=t.value;
+      generate();
+    });
+  }
+  // add buttons
+  var adds=f.querySelectorAll('[data-add]');
+  for(var k=0;k<adds.length;k++){
+    adds[k].addEventListener('click', function(e){
+      var which=e.target.getAttribute('data-add');
+      if(which==='FAQPage') state.FAQPage.push({ q:'', a:'' });
+      else if(which==='HowTo') state.HowTo.steps.push({ name:'', text:'' });
+      else if(which==='BreadcrumbList') state.BreadcrumbList.push({ name:'', url:'' });
+      renderForm();
+    });
+  }
+  // delete buttons
+  var dels=f.querySelectorAll('[data-del]');
+  for(var m=0;m<dels.length;m++){
+    dels[m].addEventListener('click', function(e){
+      var which=e.target.getAttribute('data-del'), idx=+e.target.getAttribute('data-i');
+      if(which==='FAQPage' && state.FAQPage.length>1) state.FAQPage.splice(idx,1);
+      else if(which==='FAQPage') state.FAQPage=[{ q:'', a:'' }];
+      else if(which==='HowTo' && state.HowTo.steps.length>1) state.HowTo.steps.splice(idx,1);
+      else if(which==='HowTo') state.HowTo.steps=[{ name:'', text:'' }];
+      else if(which==='BreadcrumbList' && state.BreadcrumbList.length>1) state.BreadcrumbList.splice(idx,1);
+      else if(which==='BreadcrumbList') state.BreadcrumbList=[{ name:'', url:'' }];
+      renderForm();
+    });
+  }
+}
+
+var lastJson='';
+function generate(){
+  var type=v('schemaType');
+  var obj=BUILDERS[type]();
+  var json=JSON.stringify(obj,null,2);
+  lastJson='<script type="application/ld+json">\n'+json+'\n<\/script>';
+  el('output').textContent=lastJson;
+}
+
+el('schemaType').addEventListener('change', renderForm);
+el('copyBtn').addEventListener('click', function(){
+  var btn=el('copyBtn'), text=lastJson;
+  function done(){ btn.textContent='✓ Copied'; setTimeout(function(){ btn.textContent='📋 Copy'; },1500); }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else { fallback(); }
+  function fallback(){
+    var ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); done(); }catch(e){}
+    document.body.removeChild(ta);
+  }
+});
+
+renderForm();
+</script>
+</body>
+</html>
