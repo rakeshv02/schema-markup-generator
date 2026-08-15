@@ -53,6 +53,9 @@
     .btn-sm:hover{background:#475569}
     .btn-danger{background:#7f1d1d;color:#fecaca}
     .btn-danger:hover{background:#991b1b}
+    .btn-sm[disabled]{opacity:.45;cursor:not-allowed}
+    .warn{background:#3a1e1e;border:1px solid #7f1d1d;color:#fecaca;border-radius:8px;padding:10px 12px;font-size:13px;margin-bottom:10px}
+    .warn ul{margin:6px 0 0 18px}
     .repeat-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:10px}
     .repeat-row>.fields{flex:1;min-width:0}
     .repeat-row>.fields input,.repeat-row>.fields textarea{margin-bottom:6px}
@@ -113,6 +116,7 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
           <a class="rrt" id="rrtLink" href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer">✅ Validate on Rich Results Test →</a>
         </div>
       </div>
+      <div id="warn" class="warn" style="display:none"></div>
       <pre id="output">&lt;script type="application/ld+json"&gt;&lt;/script&gt;</pre>
     </div>
   </div>
@@ -262,7 +266,8 @@ var state = {
 var CURRENCIES = ['USD','EUR','GBP','CAD','AUD','JPY','INR'];
 var AVAIL = ['InStock','OutOfStock','PreOrder','BackOrder','Discontinued'];
 
-function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+// Encodes & < > " so values are safe in both text and double-quoted attribute contexts.
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function el(id){ return document.getElementById(id); }
 function v(id){ var e=el(id); return e ? e.value : ''; }
 
@@ -354,6 +359,57 @@ var BUILDERS = {
   FAQPage: buildFAQ, Article: buildArticle, LocalBusiness: buildLocal,
   Product: buildProduct, HowTo: buildHowTo, BreadcrumbList: buildBreadcrumb
 };
+
+// ---- Per-type validation: returns array of human-readable errors.
+// Builders already skip fully-empty rows and omit blank optional fields; these
+// checks catch missing REQUIRED properties so we never emit invalid rich-result JSON-LD.
+function nonEmpty(s){ return s && String(s).trim()!==''; }
+function VALIDATORS(type){
+  var e=[];
+  if(type==='FAQPage'){
+    var faqs=state.FAQPage.filter(function(x){ return nonEmpty(x.q) || nonEmpty(x.a); });
+    if(faqs.length===0) e.push('Add at least one question and answer.');
+    faqs.forEach(function(x,i){
+      if(!nonEmpty(x.q)) e.push('Q&A #'+(i+1)+': question text is required.');
+      if(!nonEmpty(x.a)) e.push('Q&A #'+(i+1)+': answer text is required.');
+    });
+  } else if(type==='Article'){
+    var a=state.Article;
+    if(!nonEmpty(a.headline)) e.push('Headline is required.');
+    if(!nonEmpty(a.image)) e.push('Image URL is required for Article rich results.');
+    if(!nonEmpty(a.author)) e.push('Author is required.');
+    if(!nonEmpty(a.datePublished)) e.push('Date published is required.');
+  } else if(type==='LocalBusiness'){
+    var b=state.LocalBusiness;
+    if(!nonEmpty(b.name)) e.push('Business name is required.');
+    if(!nonEmpty(b.street)||!nonEmpty(b.city)||!nonEmpty(b.country)) e.push('A full address (street, city, country) is required.');
+    if((nonEmpty(b.lat)&&!nonEmpty(b.lng))||(!nonEmpty(b.lat)&&nonEmpty(b.lng))) e.push('Geo coordinates need both latitude and longitude.');
+  } else if(type==='Product'){
+    var p=state.Product;
+    if(!nonEmpty(p.name)) e.push('Product name is required.');
+    if(!nonEmpty(p.image)) e.push('Image URL is required for Product rich results.');
+    if(!nonEmpty(p.price)) e.push('Price is required (with an offer).');
+    if((nonEmpty(p.rating)&&!nonEmpty(p.reviewCount))||(!nonEmpty(p.rating)&&nonEmpty(p.reviewCount))) e.push('Aggregate rating needs both a rating value and a review count.');
+  } else if(type==='HowTo'){
+    var h=state.HowTo;
+    if(!nonEmpty(h.name)) e.push('Title is required.');
+    var steps=h.steps.filter(function(x){ return nonEmpty(x.name) || nonEmpty(x.text); });
+    if(steps.length===0) e.push('Add at least one step.');
+    steps.forEach(function(x,i){ if(!nonEmpty(x.text)) e.push('Step #'+(i+1)+': instruction text is required.'); });
+  } else if(type==='BreadcrumbList'){
+    var items=state.BreadcrumbList.filter(function(x){ return nonEmpty(x.name) || nonEmpty(x.url); });
+    if(items.length===0) e.push('Add at least one breadcrumb item.');
+    items.forEach(function(x,i){
+      if(!nonEmpty(x.name)) e.push('Breadcrumb #'+(i+1)+': name is required.');
+      if(!nonEmpty(x.url)) e.push('Breadcrumb #'+(i+1)+': URL is required.');
+    });
+  }
+  return e;
+}
+
+// Escape characters that could break out of a <script> element when JSON-LD
+// is embedded literally. Applied to the stringified JSON before wrapping.
+function jsonSafe(json){ return json.replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026'); }
 
 // ---- Form renderers (per type) ----
 function textField(label, id, val, ph, multiline){
@@ -527,16 +583,35 @@ function bindForm(type){
 }
 
 var lastJson='';
+var outputValid=false;
 function generate(){
   var type=v('schemaType');
+  var errors=VALIDATORS(type);
+  var warn=el('warn'), btn=el('copyBtn');
+  if(errors.length){
+    outputValid=false;
+    lastJson='';
+    warn.innerHTML='<strong>⚠️ Not yet valid — fill required fields:</strong><ul>'+
+      errors.map(function(m){ return '<li>'+esc(m)+'</li>'; }).join('')+'</ul>';
+    warn.style.display='block';
+    el('output').textContent='// Fix the highlighted issues above to generate valid JSON-LD.';
+    btn.setAttribute('disabled','disabled');
+    btn.textContent='📋 Copy';
+    return;
+  }
+  outputValid=true;
+  warn.style.display='none';
+  warn.innerHTML='';
   var obj=BUILDERS[type]();
-  var json=JSON.stringify(obj,null,2);
+  var json=jsonSafe(JSON.stringify(obj,null,2));
   lastJson='<script type="application/ld+json">\n'+json+'\n<\/script>';
   el('output').textContent=lastJson;
+  btn.removeAttribute('disabled');
 }
 
 el('schemaType').addEventListener('change', renderForm);
 el('copyBtn').addEventListener('click', function(){
+  if(!outputValid || !lastJson) return;
   var btn=el('copyBtn'), text=lastJson;
   function done(){ btn.textContent='✓ Copied'; setTimeout(function(){ btn.textContent='📋 Copy'; },1500); }
   if(navigator.clipboard && navigator.clipboard.writeText){
