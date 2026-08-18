@@ -231,7 +231,113 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
 <div>Free, private, browser-based tools. No sign-up, no tracking.</div>
 <div style="margin-top:6px"><a href="https://tabutility.com" style="color:#818cf8;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#94a3b8;text-decoration:none">Blog</a> · <a href="https://tabutility.com/about/" style="color:#94a3b8;text-decoration:none">About</a> · <a href="https://tabutility.com/privacy-policy/" style="color:#94a3b8;text-decoration:none">Privacy</a> · <a href="https://tabutility.com/contact/" style="color:#94a3b8;text-decoration:none">Contact</a></div>
 <div style="margin-top:6px;color:#64748b">© 2026 Tabutility</div>
-</footer>
+
+  <section id="seo-content" style="background:#1a1a2e;color:#e2e8f0;padding:60px 20px;margin-top:40px;border-top:1px solid #2d3748;">
+    <div style="max-width:860px;margin:0 auto;font-family:system-ui,-apple-system,sans-serif;line-height:1.7;">
+      <h2 style="font-size:2rem;font-weight:700;color:#f1f5f9;margin-bottom:24px;">How to Use the Schema Markup Generator</h2>
+      <p style="margin-bottom:16px;color:#cbd5e1;">The Schema Markup Generator creates valid JSON-LD structured data for the most commonly used Schema.org types: FAQ, Article, LocalBusiness, Product, HowTo, and Breadcrumb. Structured data helps search engines understand your content and can enable rich results in Google SERPs.</p>
+      <p style="margin-bottom:16px;color:#cbd5e1;">Select your schema type, fill in the relevant fields, and the generator produces properly formatted JSON-LD code ready to paste into a <script> tag in your page's <head>. All generated schemas are validated against Schema.org specifications.</p>
+      <p style="margin-bottom:16px;color:#cbd5e1;">A critical nuance: structured data doesn't directly improve search rankings but can significantly improve click-through rates by enabling rich results (FAQ expandable sections, star ratings, breadcrumb trails, HowTo step cards). Google chooses whether to display rich results based on relevance to the search query — not just the presence of markup.</p>
+
+      <div style="background:#0f172a;border:1px solid #334155;border-radius:12px;padding:28px;margin:32px 0;">
+        <h3 style="font-size:1.2rem;font-weight:600;color:#f1f5f9;margin-bottom:16px;">📊 Worked Example</h3>
+        <p style="color:#94a3b8;margin:0 0 12px;">FAQ Schema example output:</p>
+        <pre style="background:#0a0e1a;padding:12px;border-radius:8px;font-size:0.75rem;color:#94a3b8;overflow:auto;">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How does this work?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It works by..."
+    }
+  }]
+}</pre>
+      </div>
+
+      <h3 style="font-size:1.4rem;font-weight:600;color:#f1f5f9;margin:32px 0 16px;">Common Use Cases</h3>
+      <ul style="list-style:none;padding:0;margin:0 0 32px;">
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Adding FAQ schema to pages with Q&A sections for rich results</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Generating Article schema for blog posts and news articles</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Creating LocalBusiness markup for business listings</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Adding Product schema with pricing and availability to product pages</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Building Breadcrumb schema for improved navigation display in SERPs</li>
+        <li style="padding:8px 0;border-bottom:1px solid #1e293b;color:#cbd5e1;">✅ Creating HowTo schema for step-by-step instructional content</li>
+      </ul>
+
+      <h3 style="font-size:1.4rem;font-weight:600;color:#f1f5f9;margin:32px 0 24px;">Frequently Asked Questions</h3>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">What is JSON-LD structured data?</h4>
+        <p style="color:#cbd5e1;margin:0;">JSON-LD (JavaScript Object Notation for Linked Data) is Google's preferred format for structured data markup. It's inserted as a <script type='application/ld+json'> block in your HTML, containing a machine-readable description of your page content. It doesn't affect visual page content but helps search engines understand and potentially display rich results.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">Will adding schema markup always enable rich results?</h4>
+        <p style="color:#cbd5e1;margin:0;">No. Adding valid schema markup makes you eligible for rich results, but Google decides whether to show them. Factors affecting eligibility: the page must genuinely contain the information described (Google cross-checks), the site must have sufficient trust/authority, and the search query must be relevant. Don't add schema for content that isn't on the page.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">How do I validate my schema markup?</h4>
+        <p style="color:#cbd5e1;margin:0;">Use Google's Rich Results Test (search.google.com/test/rich-results) to validate your markup and see which rich results it's eligible for. Also use Schema.org's validator (validator.schema.org) for general validation. Google Search Console shows which pages have rich results enabled or have structured data errors.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">Which schema types generate Google rich results?</h4>
+        <p style="color:#cbd5e1;margin:0;">Rich result-eligible schema types include: FAQ (expandable Q&A in search results), HowTo (step cards), Recipe (cooking cards with ratings, time), Product (price, rating, availability), Article/News (article carousel), Event (date/venue), and LocalBusiness (knowledge panel). Review Google's rich results documentation for the latest eligible types.</p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px;">Can I have multiple schema types on one page?</h4>
+        <p style="color:#cbd5e1;margin:0;">Yes. Multiple schema blocks can exist on the same page, each in its own <script> tag. For example, an article page might have Article schema, BreadcrumbList schema, and FAQ schema simultaneously. Each is processed independently by search engines. Don't nest unrelated types within each other — use separate blocks.</p>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is JSON-LD structured data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSON-LD (JavaScript Object Notation for Linked Data) is Google's preferred format for structured data markup. It's inserted as a <script type='application/ld+json'> block in your HTML, containing a machine-readable description of your page content. It doesn't affect visual page content but helps search engines understand and potentially display rich results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will adding schema markup always enable rich results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Adding valid schema markup makes you eligible for rich results, but Google decides whether to show them. Factors affecting eligibility: the page must genuinely contain the information described (Google cross-checks), the site must have sufficient trust/authority, and the search query must be relevant. Don't add schema for content that isn't on the page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I validate my schema markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Google's Rich Results Test (search.google.com/test/rich-results) to validate your markup and see which rich results it's eligible for. Also use Schema.org's validator (validator.schema.org) for general validation. Google Search Console shows which pages have rich results enabled or have structured data errors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which schema types generate Google rich results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rich result-eligible schema types include: FAQ (expandable Q&A in search results), HowTo (step cards), Recipe (cooking cards with ratings, time), Product (price, rating, availability), Article/News (article carousel), Event (date/venue), and LocalBusiness (knowledge panel). Review Google's rich results documentation for the latest eligible types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I have multiple schema types on one page?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Multiple schema blocks can exist on the same page, each in its own <script> tag. For example, an article page might have Article schema, BreadcrumbList schema, and FAQ schema simultaneously. Each is processed independently by search engines. Don't nest unrelated types within each other — use separate blocks."
+      }
+    }
+  ]
+}
+  </script>
+  </footer>
 
 <script>
 // ---- Schema Markup Generator ----
